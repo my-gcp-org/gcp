@@ -1,0 +1,8 @@
+terraform.tfstate.d
+.vscode
+.terraform
+*.tfstate
+config.tf
+backend.hcl
+terraform-state.tf
+*.json
