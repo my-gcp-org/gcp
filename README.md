@@ -4,5 +4,6 @@
 
 # How do I get set up?
 
-   Configure this repo into TF Cloud and run from there. Details will be updated soon.
+   Update your terraform code in this repo. This repo is configured in Terraform Cloud.
+   Every code push will trigger TF Cloud to update the backend Infra.
 
