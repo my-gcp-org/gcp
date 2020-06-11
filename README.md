@@ -1,6 +1,6 @@
 # What is this repository for?
 
-   This repo is a sample TF code that creates a public webserver in GCP.
+   This repo is a sample TF code that creates a public webserver in GCP. 
 
 # How do I get set up?
 
