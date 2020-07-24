@@ -3,9 +3,9 @@ on: push
 jobs:
   terraform:
     runs-on: ubuntu-latest
-    # - steps:
-    # - name: checkout
-    #   uses: actions/checkout@v2
+    steps:
+    - name: checkout
+       uses: actions/checkout@v2
     # - name: tf-run
     #   uses: hashicorp/setup-terraform@v1
     #   with:
