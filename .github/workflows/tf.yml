@@ -2,7 +2,7 @@ name: 'HashiCorp - Setup Terraform'
 on: push
 jobs:
     terraform:
-      name: tf-job  
+      name: tf-job
       runs-on: ubuntu-latest
       - steps:
       - name: checkout
