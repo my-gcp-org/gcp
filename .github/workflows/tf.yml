@@ -2,34 +2,33 @@ name: 'HashiCorp - Setup Terraform'
 on: push
 jobs:
   terraform:
-    name: tf-job
     runs-on: ubuntu-latest
-    - steps:
-    - name: checkout
-      uses: actions/checkout@v2
-    - name: tf-run
-      uses: hashicorp/setup-terraform@v1
-      with:
-        cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
-        terraform_version: 0.12.25
-        terraform_wrapper: false
+    # - steps:
+    # - name: checkout
+    #   uses: actions/checkout@v2
+    # - name: tf-run
+    #   uses: hashicorp/setup-terraform@v1
+    #   with:
+    #     cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+    #     terraform_version: 0.12.25
+    #     terraform_wrapper: false
     
-    - id: fmt
-      run: terraform fmt
-      continue-on-error: true
-    - id: init
-      run: terraform init
-      continue-on-error: true
-    - id: validate
-      run: terraform validate -no-color
-      continue-on-error: true
-    - id: plan
-      run: terraform plan -no-color
-      continue-on-error: true
-    - run: echo ${{ steps.plan.outputs.stdout }}
-    - run: echo ${{ steps.plan.outputs.stderr }}
-    - run: echo ${{ steps.plan.outputs.exitcode }}
-    - run: echo ${{ steps.plan.outputs.exitcode }}
+    # - id: fmt
+    #   run: terraform fmt
+    #   continue-on-error: true
+    # - id: init
+    #   run: terraform init
+    #   continue-on-error: true
+    # - id: validate
+    #   run: terraform validate -no-color
+    #   continue-on-error: true
+    # - id: plan
+    #   run: terraform plan -no-color
+    #   continue-on-error: true
+    # - run: echo ${{ steps.plan.outputs.stdout }}
+    # - run: echo ${{ steps.plan.outputs.stderr }}
+    # - run: echo ${{ steps.plan.outputs.exitcode }}
+    # - run: echo ${{ steps.plan.outputs.exitcode }}
     
     # defaults:
     #   - id: github-tf
