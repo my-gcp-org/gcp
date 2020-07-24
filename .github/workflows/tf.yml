@@ -3,6 +3,7 @@ on:
 - push
 jobs:
     terraform:
+      runs-on: ubuntu-latest
         steps:
         - name: checkout
           uses: actions/checkout@v2
