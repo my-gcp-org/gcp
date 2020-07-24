@@ -19,10 +19,10 @@ jobs:
           run: terraform validate -no-color
           run: terraform plan -no-color
           continue-on-error: true
-
         - run: echo ${{ steps.plan.outputs.stdout }}
         - run: echo ${{ steps.plan.outputs.stderr }}
         - run: echo ${{ steps.plan.outputs.exitcode }}
+        
         defaults:
           run:
             working-directory: ${{ env.tf_actions_working_dir }}
