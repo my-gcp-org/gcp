@@ -4,8 +4,8 @@ resource "random_id" "instance_id" {
 
 resource "google_compute_instance" "default" {
   name         = "vm-${random_id.instance_id.hex}"
-  machine_type = "e2-standard-2"
-  zone         = "asia-south1-b"
+  machine_type = "e2-medium"
+  zone         = "asia-south1-a"
 
   boot_disk {
     initialize_params {
